@@ -1,0 +1,4 @@
+name = "tdpe"
+uuid = "743fbd61-facc-4796-a4ee-10b291fcdb04"
+authors = ["Lucas Treffenstädt <lucas@treffenstaedt.de>"]
+version = "0.1.0"
