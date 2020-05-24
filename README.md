@@ -1,2 +1,2 @@
-# ttpe
+# tdpe
 Test Driven Project Euler
