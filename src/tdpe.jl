@@ -1,3 +1,5 @@
-function foo()
-    return 0
+module tdpe
+
+include("001.jl")
+
 end

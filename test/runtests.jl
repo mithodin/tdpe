@@ -1,5 +1,6 @@
 using Test
+using tdpe
 
 @testset "Project Euler" begin
-    @test foo == 0
+    include("001.jl")
 end
