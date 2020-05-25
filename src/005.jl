@@ -5,8 +5,7 @@ end
 function prod_of_factors(n)
     factors = zeros(Int8, n+1)
     for i = 2:n
-        channel = Channel(c->get_prime_factors(c, i))
-        for (f, mul) in channel
+        for (f, mul) in Channel(c -> get_prime_factors(c, i))
             if factors[f] < mul
                 factors[f] = mul
             end
