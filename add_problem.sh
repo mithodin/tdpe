@@ -21,3 +21,7 @@ echo -e $testfile > test/$number.jl
 sed -i 's/#end prints/solution'$number'()\n    #end prints/g' src/tdpe.jl
 sed -i 's/#end includes/include("'$number'.jl")\n#end includes/g' src/tdpe.jl
 sed -i 's/#end includes/include("'$number'.jl")\n    #end includes/g' test/runtests.jl
+
+git add src/$number.jl
+git add test/$number.jl
+git commit -m "Add problem $number stub" src/tdpe.jl src/$number.jl test/$number.jl test/runtests.jl
