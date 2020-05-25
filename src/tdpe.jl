@@ -1,5 +1,7 @@
 module tdpe
 
+include("common.jl")
+
 #include individual problems
 include("001.jl")
 include("002.jl")

@@ -10,3 +10,18 @@ using tdpe
     include("005.jl")
     #end includes
 end
+
+@testset "Prime Factors" begin
+   @test begin
+        channel = Channel(c -> tdpe.get_prime_factors(c,6))
+        f0,n0 = take!(channel)
+        f1,n1 = take!(channel)
+        f0,n0,f1,n1
+   end == (2,1,3,1)
+   
+   @test begin
+        channel = Channel(c -> tdpe.get_prime_factors(c,13))
+        f0,n0 = take!(channel)
+        f0,n0
+   end == (13,1)
+end
