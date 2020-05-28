@@ -8,6 +8,7 @@ include("002.jl")
 include("003.jl")
 include("004.jl")
 include("005.jl")
+include("006.jl")
 #end includes
 
 function print_solutions()
@@ -17,6 +18,7 @@ function print_solutions()
     solution003()
     solution004()
     solution005()
+    solution006()
     #end prints
 end
 

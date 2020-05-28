@@ -8,6 +8,7 @@ using tdpe
     include("003.jl")
     include("004.jl")
     include("005.jl")
+    include("006.jl")
     #end includes
 end
 
