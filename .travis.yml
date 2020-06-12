@@ -2,9 +2,9 @@ language: julia
 julia:
   - 1.4.1
 deploy:
-  provider: pages:git
-  skip_cleanup: true
-  keep_history: true
-  edge: true
-  local_dir: "solutions"
-  before_deploy: "julia solutions.jl > solutions/solutions.md"
+  - provider: pages:git
+    skip_cleanup: true
+    keep_history: true
+    edge: true
+    local_dir: "solutions"
+    before_deploy: "julia solutions.jl > solutions/solutions.md"
