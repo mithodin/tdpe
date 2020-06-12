@@ -3,7 +3,7 @@ julia:
   - 1.4.1
 before_deploy:
   - "pwd"
-  - "./get_solutions.sh"
+  - "ls -lhR"
 deploy:
   - provider: pages:git
     skip_cleanup: true
