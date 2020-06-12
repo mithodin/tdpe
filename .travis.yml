@@ -1,7 +1,7 @@
 language: julia
 julia:
   - 1.4.1
-before_deploy: "get_solutions.sh"
+before_deploy: "./get_solutions.sh"
 deploy:
   - provider: pages:git
     skip_cleanup: true
