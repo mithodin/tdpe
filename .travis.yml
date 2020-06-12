@@ -3,8 +3,8 @@ julia:
   - 1.4.1
 before_deploy: "julia solutions.jl > solutions/solutions.md"
 deploy:
-  edge: true
   - provider: pages:git
     skip_cleanup: true
     keep_history: true
     local_dir: "solutions"
+    edge: true
