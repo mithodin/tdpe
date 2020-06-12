@@ -8,5 +8,4 @@ deploy:
     skip_cleanup: true
     keep_history: true
     local_dir: "solutions"
-    target_branch: "master"
     edge: true
