@@ -1,9 +1,9 @@
 function e007(N)
-    return 0
+    return get_nth_prime(N)
 end
 
 function solution007()
-    N = 0
+    N = 10001
     answer = e007(N)
     println("The answer to problem 007 is $answer")
 end
