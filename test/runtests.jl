@@ -28,4 +28,12 @@ end
         f0,n0 = take!(channel)
         f0,n0
    end == (13,1)
+
+end
+
+@testset "Primes" begin
+     @test tdpe.get_nth_prime(1) == 2
+     @test tdpe.get_nth_prime(2) == 3
+     @test tdpe.get_nth_prime(3) == 5
+     @test tdpe.get_nth_prime(245) == 1553
 end
