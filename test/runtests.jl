@@ -1,21 +1,6 @@
 using Test
 using tdpe
 
-@testset "Project Euler" begin
-    #include individual tests
-    include("001.jl")
-    include("002.jl")
-    include("003.jl")
-    include("004.jl")
-    include("005.jl")
-    include("006.jl")
-    include("007.jl")
-    include("008.jl")
-    include("009.jl")
-    include("010.jl")
-    #end includes
-end
-
 @testset "Prime Factors" begin
    @test begin
         channel = Channel(c -> tdpe.get_prime_factors(c,6))
@@ -37,4 +22,19 @@ end
      @test tdpe.get_nth_prime(2) == 3
      @test tdpe.get_nth_prime(3) == 5
      @test tdpe.get_nth_prime(245) == 1553
+end
+
+@testset "Project Euler" begin
+    #include individual tests
+    include("001.jl")
+    include("002.jl")
+    include("003.jl")
+    include("004.jl")
+    include("005.jl")
+    include("006.jl")
+    include("007.jl")
+    include("008.jl")
+    include("009.jl")
+    include("010.jl")
+    #end includes
 end
