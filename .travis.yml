@@ -1,3 +1,5 @@
+os: linux
+dist: xenial
 language: julia
 julia:
   - 1.4.1
@@ -5,7 +7,13 @@ before_deploy:
   - "./get_solutions.sh"
 deploy:
   - provider: pages:git
-    skip_cleanup: true
+    cleanup: false
     keep_history: true
     local_dir: "solutions"
     edge: true
+notifications:
+  email:
+    recipients:
+      - secure: "SgOMuHQTUWnEoiXT7Qz889n1NZnz9X83vnwGCHzi7tf/U5s6S9sVmItbqAN5Nl682mWRsBG5p0yw5j/63nAoD6DJDx73FL6dtxglcO0JYz7WUuMfQhR3opIMiA9wsCswHStsbdga8lZn4wZcM8C7ODX+8R+b1EwneRnn9SciaVX2QT0mb4fncxEa9wUxlxb/qkXW9/MC8AJJRtPJagCEGwvN8V2hbEumttuOEFa5XtMVXTc/tg8P7+cbEyZ+SpBigJ01JXbK8pIx/qhzVo7TwsaADzkXmSTtAPFmYp5pcgtm1+QOPFZL1u6D7DjO95XtCO4rNk+LPyXcmgLgbNJnotdXoEuj3Gopbx9rCkJIhFqU9Lv3NVu0yLxzPxf0nXNkkB7NwOjGYAVoT5J5uxjE2h8VvZtHw7VgwPLbtx7UFi4bIJB3n5n6SwL1lpIcI/auH6i3U9yFZsJVom5Freb8sWd9YZej6WC4aFpl7HhjkA7S/e9jHlEBBeHzo6BPEo0JGGxYRl/eNTIijY+gA8dZbiY0d+DCfDtkfqt79Ou6ftsd3ObFjg0E0asmTsERHMR1TvtHnHEt6fO+gHDQDW8anFvqTrZD2wG8+YZysIdQ7hgH8e1blT+buck1IEaNzWWKVl/t5t5E5sl+jPdaJMoUhSPtM3XuEB1JduI6eVMD7no="
+    on_success: always
+    on_failure: always
